@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<Books token={token} />} />
         <Route path="/books" element={<Books token={token}/>} />
         <Route path="/books/:bookId" element={<SingleBook token={token} />} />
-        <Route path="/login" element={<Login />} setToken={setToken} />
+        <Route path="/login" element={<Login setToken={setToken} />} />
         <Route path="/register" element={<Register setToken={setToken} />} />
         <Route path="/account" element={<Account token={token} setToken={setToken} />} />
       </Routes>

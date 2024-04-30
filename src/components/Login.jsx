@@ -27,15 +27,13 @@ function Login({ setToken }) {
             navigate("/books");
         } catch (error) {
             setError(error.message)
+            console.log(error)
         }
     }
 
     return (
         <>
             <h2>Login!</h2>
-            {
-                error && <p>{error}</p>
-            }
             <form onSubmit={handleSubmit}>
                 <label>
                     Email: <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />

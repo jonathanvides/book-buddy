@@ -29,15 +29,13 @@ function Register({ setToken }) {
             navigate("/login");
         } catch (error) {
             setError(error.message);
+            console.log(error);
         }
     }
 
     return (
         <>
             <h2>Sign Up!</h2>
-            {
-                error && <p>{error}</p>
-            }
             <form onSubmit={handleSubmit}>
                 <label>
                     First Name: <input value={firstname} onChange={(e) => setFirstName(e.target.value)} />
@@ -51,7 +49,7 @@ function Register({ setToken }) {
                 <label>
                     Password: <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </label>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </>
     )
