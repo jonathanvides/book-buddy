@@ -27,11 +27,13 @@ function Books() {
     }
 
     return (
-        <div className="books">
-            <h2>Search</h2>
+        <>
+            <h2 className="search">Search</h2>
             <input className="searchTerm" label="Search" onChange={onInputChange} />
-            {filteredBooks.map(book => <Card key={book.id} book={book} />)}
-        </div>
+            <div className="books">
+                {filteredBooks.map(book => <Card key={book.id} book={book} />)}
+            </div>
+        </>
     )
 
 }

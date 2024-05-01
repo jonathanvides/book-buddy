@@ -23,8 +23,8 @@ function User({ token }) {
 
     return (
         <>
-            <p>Name: {user.firstname} {user.lastname}</p>
-            <p>Email: {user.email}</p>
+            <p className="name-user">Name: {user.firstname} {user.lastname}</p>
+            <p className="email-user">Email: {user.email}</p>
         </>
     )
 }

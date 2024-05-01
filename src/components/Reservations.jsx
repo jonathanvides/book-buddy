@@ -3,7 +3,7 @@ import SingleReservation from "./SingleReservation"
 
 function Reservations({ token }) {
     const APIURL = `https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/reservations`;
-	const [reservations, setReservations] = useState([]);
+    const [reservations, setReservations] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -33,9 +33,11 @@ function Reservations({ token }) {
             {token && reservations.length > 0 ? (
                 <>
                     <h2>Reservations</h2>
-                    {reservations.map((reservation, index) => (
-						<SingleReservation key={reservation.id} token={token} index={index} reservation={reservation} reservations={reservations} setReservations={setReservations} />
-					))}
+                    <div className="reservations">
+                        {reservations.map((reservation, index) => (
+                            <SingleReservation key={reservation.id} token={token} index={index} reservation={reservation} reservations={reservations} setReservations={setReservations} />
+                        ))}
+                    </div>
                 </>
             ) : !token ? (
                 <h2>Login to view your book reservations.</h2>

@@ -32,11 +32,11 @@ function Login({ setToken }) {
     return (
         <>
             <h2>Login!</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
+            <form className="login-form" onSubmit={handleSubmit}>
+                <label className="email">
                     Email: <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </label>
-                <label>
+                <label className="password">
                     Password: <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </label>
                 <button>Submit</button>

@@ -15,8 +15,10 @@ function App() {
 
   return (
     <>
-      <h1><img id='logo-image' src={bookLogo} />Library App</h1>
-      <Nav token={token} />
+      <div className='top-page'>
+        <h1><img id='logo-image' src={bookLogo} />Library App</h1>
+        <Nav token={token} />
+      </div>
 
       <Routes>
         <Route path="/" element={<Books token={token} />} />

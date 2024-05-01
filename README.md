@@ -1,1 +1,1 @@
-Netlify Link: https://66303b14198d2743f4650e69--kaleidoscopic-lollipop-bdb558.netlify.app/
+Netlify Link: https://6632d5588469fc36475eea38--lucky-cobbler-6f2981.netlify.app/

@@ -34,7 +34,7 @@ function Register({ setToken }) {
     return (
         <>
             <h2>Sign Up!</h2>
-            <form onSubmit={handleSubmit}>
+            <form className="register-form" onSubmit={handleSubmit}>
                 <label>
                     First Name: <input value={firstname} onChange={(e) => setFirstName(e.target.value)} />
                 </label>

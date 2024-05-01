@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Georgia, serif;
   background-color: #f8f8f8;
@@ -11,3 +17,157 @@ body {
 }
 
 /* Add your own custom styles here */
+.book-card {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: 500;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.coverimage {
+  max-height: 300px;
+}
+
+.back-button {
+  margin-bottom: 30px;
+}
+
+h1 {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.register-form {
+  display: flex;
+  height: fit-content;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.login-form {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.title {
+  margin-top: 30px;
+}
+
+.description {
+  padding: 0px 10px 0px 10px;
+}
+
+.searchTerm {
+  margin-left: 10px;
+  margin-bottom: 10px;
+} 
+
+.email {
+  padding-right: 5px;
+}
+
+.password {
+  padding-right: 5px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.top-page {
+  background-color: salmon;
+  margin-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 10px;
+}
+
+.name-user {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  font-weight: 500;
+  font-size: large;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.email-user {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  font-weight: 500;
+  font-size: large;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.logout {
+  margin-left: 10px;
+}
+
+.res-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+}
+
+.res-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+}
+
+.res-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 0px;
+}
+
+.res-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px 0px 0px;
+}
+
+.reservations {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}

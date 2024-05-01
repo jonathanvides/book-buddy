@@ -15,7 +15,9 @@ function Account({ token, setToken }) {
             {token ? (
                 <>
                     <User token={token} />
-                    <button onClick={() => handleClick()}>Log Out</button>
+                    <div className="logout">
+                        <button onClick={() => handleClick()}>Log Out</button>
+                    </div>
                 </>
             ) : (
                 <h2>Login to view your account information.</h2>
