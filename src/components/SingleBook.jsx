@@ -1,12 +1,12 @@
-/* TODO - add your code to create a functional React component that renders details for a single book. Fetch the book data from the provided API. You may consider conditionally rendering a 'Checkout' button for logged in users. */
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import Card from "./Card"
 import { fetchSingleBook } from "../API"
 
-function SingleBook() {
+function SingleBook({ token }) {
     const [book, setBook] = useState()
     const [isLoading, setIsLoading] = useState(true)
+    const [viewDetails, setViewDetails] = useState(true);
     const { bookId } = useParams()
 
     useEffect(() => {
@@ -32,7 +32,7 @@ function SingleBook() {
 
     return (
         <>
-            <Card key={book.id} book={book} />
+            <Card key={book.id} book={book} token={token} viewDetails={setViewDetails} />
         </>
     )
 }

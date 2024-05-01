@@ -1,4 +1,3 @@
-/* TODO - add your code to create a functional React component that renders a login form */
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -19,11 +18,10 @@ function Login({ setToken }) {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({email, password}),
+                body: JSON.stringify({ email, password }),
             })
             const result = await response.json();
             setToken(result.token);
-            console.log("result", result);
             navigate("/books");
         } catch (error) {
             setError(error.message)

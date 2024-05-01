@@ -30,7 +30,7 @@ const fetchUser = async (token) => {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`,
             },
-        })
+        });
         const result = await response.json();
         return result;
     } catch (err) {
@@ -38,4 +38,23 @@ const fetchUser = async (token) => {
     }
 }
 
-export { fetchAllBooks, fetchSingleBook, fetchUser }
+const fetchReservation = async (bookId, token) => {
+    try {
+        const response = await fetch (`${APIURL}/books/${bookId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+                available: false,
+            })
+        });
+        const result = await response.json();
+        return result;
+    } catch (err) {
+        console.log("Uh oh, having trouble fetching book reservation!", err);
+    }
+}
+
+export { fetchAllBooks, fetchSingleBook, fetchUser, fetchReservation }

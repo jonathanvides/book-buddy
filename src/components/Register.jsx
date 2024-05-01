@@ -1,4 +1,3 @@
-/* TODO - add your code to create a functional React component that renders a registration form */
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -21,11 +20,10 @@ function Register({ setToken }) {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({firstname, lastname, email, password}),
+                body: JSON.stringify({ firstname, lastname, email, password }),
             })
             const result = await response.json();
             setToken(result.token);
-            console.log("result", result);
             navigate("/login");
         } catch (error) {
             setError(error.message);
