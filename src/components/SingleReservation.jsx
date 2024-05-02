@@ -29,7 +29,7 @@ function SingleReservation({ token, reservation, reservations, setReservations, 
             <h2 className="res-title">{reservation.title}</h2>
             <h2 className="res-author">{reservation.author}</h2>
             <img className="res-image" src={reservation.coverimage} alt={`photo of ${reservation.title} by ${reservation.author}`} />
-            <button className="res-button" onClick={deleteReservation}>Delete Book Reservation</button>
+            <button className="res-button" onClick={deleteReservation}>Return Book</button>
         </>
     )
 }
